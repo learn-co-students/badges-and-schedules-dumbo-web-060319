@@ -21,6 +21,9 @@ def assign_rooms(attendees)
     greetings
 end
 
-def printer
-
+def printer(attendees)
+    for i in attendees
+        puts badge_maker(i).chomp
+        puts "Hello, #{i}! You'll be assigned to room #{attendees.index(i) + 1}!"
+    end
 end
