@@ -13,7 +13,12 @@ def batch_badge_creator(attendees)
 end
 
 def assign_rooms(attendees)
-
+    greetings = []
+    for person in attendees
+        greeting = "Hello, #{person}! You'll be assigned to room #{attendees.index(person) + 1}!"
+        greetings.push(greeting)
+    end
+    greetings
 end
 
 def printer
